@@ -7,7 +7,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 import helloRoutes from "./routes/helloRoutes";
 
-app.get("/", helloRoutes);
+app.use("/", helloRoutes);
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
